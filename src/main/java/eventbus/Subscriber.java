@@ -34,7 +34,7 @@ public class Subscriber extends AbstractVerticle {
                 msg.reply("Please enter the right operation (+, -, x, :)");
             }
         } catch (Exception ex){
-            System.out.println("Internal Error");
+            msg.reply("Internal error");
         }
     }
 }

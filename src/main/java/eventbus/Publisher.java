@@ -10,8 +10,7 @@ public class Publisher extends AbstractVerticle {
         param.put("a",1).put("b",0).put("ope","'");
 
         vertx.eventBus().request("eventbusTest.addr","",reply->{
-            System.out.println(reply.result().body());
-
+                System.out.println(reply.result().body());
         });
 
     }

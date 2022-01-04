@@ -26,6 +26,7 @@ public class RequestHandler extends AbstractVerticle {
         HttpServerResponse response = context.response();
         Validation valid = new Validation();
         Operation ope= new Operation();
+        try{
         JsonObject param = context.getBodyAsJson();
         int a = param.getInteger("a");
         int b = param.getInteger("b");
@@ -45,6 +46,9 @@ public class RequestHandler extends AbstractVerticle {
             response.end("Please enter the right operation (+, -, x, :)");
             System.out.println("Please enter the right operation (+, -, x, :)");
 
+        }}
+        catch (Exception ex){
+            System.out.println("Internal error");
         }
 
 

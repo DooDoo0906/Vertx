@@ -7,6 +7,6 @@ public class Compilation {
         Vertx vertx=Vertx.vertx();
         //deploy client-server
         vertx.deployVerticle(new RequestSending());
-//        vertx.deployVerticle(new RequestHandler());
+        vertx.deployVerticle(new RequestHandler());
     }
 }
